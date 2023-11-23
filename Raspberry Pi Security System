@@ -1,0 +1,91 @@
+from picamera import PiCamera
+from gpiozero import Button, LED
+import time, os
+import cv2
+import imutils
+from gpiozero import MotionSensor
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+
+send_to = 'pitestingdpu@gmail.com’
+def send_email(file, file2, file3):
+    msg = MIMEMultipart('alternative')
+    msg['Subject'] = "MOTION DETECTED"
+    msg['From'] = 'pitestingdpu@gmail.com'
+    msg['To'] = send_to
+
+
+    text = MIMEText('<img src="cid:image1">', 'html')
+    msg.attach(text)
+
+    image = MIMEImage(open(file, 'rb').read())
+    image.add_header('Content-ID', '<image1>')
+    msg.attach(image)
+    
+    image2 = MIMEImage(open(file2, 'rb').read())
+    image2.add_header('Content-ID','<image2>')
+    msg.attach(image2)
+    
+    image3 = MIMEImage(open(file3, 'rb').read())
+    image3.add_header('Content-ID','<image3>')
+    msg.attach(image3)
+    
+    s = smtplib.SMTP('smtp.gmail.com',587)
+    s.ehlo()
+    s.starttls()
+    s.ehlo
+    s.login('pitestingdpu@gmail.com', '********')
+    s.sendmail('pitestingdpu@gmail.com',send_to, msg.as_string())
+    s.close()
+
+pir = MotionSensor(23)
+a = 1
+led = LED(24)
+led.toggle()
+
+def toggle_pir():
+    global a
+    if a == 1:
+        print("Sensor OFF")
+        led.toggle()
+        a = 0
+    else:
+        print("Sensor ON")
+        led.toggle()
+        a = 1
+
+button = Button(18)
+button.when_pressed = toggle_pir
+
+cap = cv2.VideoCapture(0)
+ret, fram = cap.read()
+
+def takePic(file):
+    (grabbed, frame) = cap.read()
+    image = file
+    cv2.imwrite(image,frame)
+    cap.release
+    return image
+
+while True:
+    if(pir.wait_for_motion() and a == 1):
+	time.sleep(0.2)
+        file = "/home/jvences/Security/capture_" + str(time.time()) + '.png'
+        takePic(file)
+        print("Pic1 taken")
+
+        time.sleep(1)
+        file2 = "/home/jvences/Security/capture_" + str(time.time()) + '.png'
+        takePic(file2)
+        print("Pic2 taken")
+        
+        time.sleep(1)
+        file3 = "/home/jvences/Security/capture_" + str(time.time()) + '.png'
+        takePic(file3)
+        print("Pic3 taken")
+        
+        send_email(file, file2, file3)
+        print("Pictures emailed")
+    time.sleep(10)
