@@ -1,0 +1,29 @@
+com/example/v2/databinding/FragmentNotificationsBinding.java
+ com.example.v2.databinding.FragmentNotificationsBinding
+com/example/v2/BuildConfig.java
+ com.example.v2.BuildConfig
+com/example/v2/DashboardFragment.java
+ com.example.v2.DashboardFragment
+ com.example.v2.DashboardFragment$1
+com/example/v2/databinding/FragmentDashboardBinding.java
+ com.example.v2.databinding.FragmentDashboardBinding
+com/example/v2/ui/home/HomeViewModel.java
+ com.example.v2.ui.home.HomeViewModel
+com/example/v2/databinding/ActivityMainBinding.java
+ com.example.v2.databinding.ActivityMainBinding
+com/example/v2/ui/notifications/NotificationsViewModel.java
+ com.example.v2.ui.notifications.NotificationsViewModel
+com/example/v2/MainActivity.java
+ com.example.v2.MainActivity
+ com.example.v2.MainActivity$1
+com/example/v2/ui/dashboard/DashboardViewModel.java
+ com.example.v2.ui.dashboard.DashboardViewModel
+com/example/v2/HomeFragment.java
+ com.example.v2.HomeFragment
+ com.example.v2.HomeFragment$1
+ com.example.v2.HomeFragment$2
+com/example/v2/databinding/FragmentHomeBinding.java
+ com.example.v2.databinding.FragmentHomeBinding
+com/example/v2/NotificationsFragment.java
+ com.example.v2.NotificationsFragment
+ com.example.v2.NotificationsFragment$1
