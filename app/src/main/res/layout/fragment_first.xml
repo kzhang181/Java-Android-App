@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/gatherslogo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+        <Button
+            android:id="@+id/button_second"
+            android:layout_below="@id/imageview"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="100dp"
+            android:layout_height="65dp"
+            android:layout_margin="5dp"
+            android:text="Home"
+            android:textSize="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/black" />
+        <Button
+            android:id="@+id/button_first"
+            android:layout_below="@id/imageview"
+            android:layout_toRightOf="@id/button_second"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="115dp"
+            android:layout_height="65dp"
+            android:layout_margin="5dp"
+            android:text="Menu"
+            android:textSize="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/black"/>
+        <Button
+            android:id="@+id/Location"
+            android:layout_below="@id/imageview"
+            android:layout_toRightOf="@id/button_first"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="115dp"
+            android:layout_height="65dp"
+            android:layout_margin="3dp"
+            android:text="Location"
+            android:textSize="20dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/black"/>
+        <Button
+            android:id="@+id/order"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/button_first"
+            android:layout_centerInParent="true"
+            android:text="ORDER AHEAD"
+            android:backgroundTint="#28B463"/>
+        <TextView
+            android:id="@+id/t1"
+            android:layout_below="@id/order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Our Story"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/black"
+            android:textSize="35dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.314" />
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_below="@id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_marginTop="3dp"
+            android:text="Gathers Tea Bar is created for the love of tea, and tea is often the center of social gatherings. Our mission is to cultivate our passion for tea throughout the community – bringing people together one cup at a time."
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_below="@id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="Our tea bar concept is based on tea flavor profiles. We want our drinks to be more about the teas and and less on additive flavors so we craft our drinks to bring out the best and strongest flavor of the base tea. "
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/t4"
+            android:layout_below="@id/t3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="With years of tea tasting and various recipe trials and errors, we have expertly infused the perfect tea drinks down to the science – from the carefully selected tea leaves, temperature, and time, to the quality of creamer/milk, sugar, and even water. "
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/t5"
+            android:layout_below="@id/t4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="We are committed to sharing our tea passion with our guests."
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="14dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

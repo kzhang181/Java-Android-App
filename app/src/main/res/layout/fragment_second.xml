@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <ImageView
+                android:id="@+id/imageview2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/gatherslogo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/traditional"
+                android:layout_below= "@id/button_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="TRADITIONAL TEA"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/classic"
+                android:layout_below= "@id/button_second"
+                android:layout_toRightOf="@id/traditional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="CLASSIC MILK TEA"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/traditional"
+                android:layout_marginLeft="5dp"
+                android:text="4.5     Assam Black Tea\n4.5     Jasmine Green Tea\n5        Osmanthus Oolong Tea\n5        Peach Oolong Tea"
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+            <TextView
+                android:id="@+id/c"
+                android:layout_below= "@id/classic"
+                android:layout_toRightOf="@id/tt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="5dp"
+                android:text="5       Assam Black Milk Tea\n5       Jasmine Green Milk Tea\n5.5    Brown Sugar Assam Black Milk Tea\n5.5    Longan Honey Jasmine Green Milk\n          Tea"
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/fruit"
+                android:layout_below= "@id/tt"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="23dp"
+                android:text="FRUIT TEA"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/teas"
+                android:layout_below="@id/fruit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Assam Black | Jasmine Green"
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+            <TextView
+                android:id="@+id/plarge"
+                android:layout_below="@id/fruit"
+                android:layout_toRightOf="@id/teas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Brewed to order, Large +1.5"
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+            <TextView
+                android:id="@+id/premuim"
+                android:layout_below= "@id/c"
+                android:layout_toRightOf="@id/fruit"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="10dp"
+                android:text="PREMUIM MILK TEA"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/f"
+                android:layout_below="@id/teas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="5       Lychee\n5       Mango\n5       Passion Fruit\n5       Peach\n5       Strawberry"
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+            <TextView
+                android:id="@+id/pre"
+                android:layout_below="@id/teas"
+                android:layout_toRightOf="@id/f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="90dp"
+                android:layout_marginRight="5dp"
+                android:text="5.5     Earl Grey Milk Tea\n5.5     Genmaicha Milk Tea\n5.5     Hojicha Milk Tea\n5.5     Rose Tieguanyin Milk Tea\n5.5     Roasted Oolong Milk Tea"
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+
+
+            <TextView
+                android:id="@+id/matchalatte"
+                android:layout_below="@id/f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:text="MATCHA LATTE"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/Milk"
+                android:layout_below="@id/matchalatte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="Whole Milk | Oat Milk +.75"
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+
+            <TextView
+                android:id="@+id/m"
+                android:layout_below="@id/Milk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="5.5     Matcha Latte\n6        Rose Matcha Latte\n6        Stawberry Matcha Latte\n6        Black Sesame Matcha Latte\n6        Brown Sugar Matcha Latte"
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+            <TextView
+                android:id="@+id/disclaimer"
+                android:layout_below="@id/Milk"
+                android:layout_toRightOf="@id/m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="5dp"
+                android:text="All drinks are iced by default
+       \nClassic and Premium Milk Teas are
+       \nprepared Taiwanese-style with
+       \nnon-dairy creamer
+       \nTag us @gathersteabar"
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+            <TextView
+                android:id="@+id/mods"
+                android:layout_below="@id/m"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="----------------- MODIFICATIONS -----------------"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/size"
+                android:layout_below="@id/mods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="SIZES"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/size"
+                android:layout_marginLeft="5dp"
+                android:text="         16oz Regular Iced\n+1     24oz Large Iced\n+.5   16oz Regular Hot"
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+            <TextView
+                android:id="@+id/toppings"
+                android:layout_below="@id/mods"
+                android:layout_toRightOf="@id/size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:text="TOPPINGS"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/top"
+                android:layout_below="@id/size"
+                android:layout_toRightOf="@id/s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="5dp"
+                android:text="+.75     Golden Boba\n+.75     Custard Pudding\n+.75     Grass Jelly\n+.75     Aiyu Jelly\n+.75     Lychee Jelly\n+.75     Chia Seeds\n+1.25   Sea Salt Cream"
+                android:textColor="@color/black"
+                android:textSize="11dp"/>
+            <TextView
+                android:id="@+id/sweetness"
+                android:layout_below="@id/s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:text="SWEETNESS"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/sweet"
+                android:layout_below="@id/sweetness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="0% | 25% | 50% | 75% | 100%\nDefault is 100% sweetness "
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+            <Button
+                android:id="@+id/button_second"
+                android:layout_below="@id/imageview2"
+                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                android:layout_width="100dp"
+                android:layout_height="65dp"
+                android:layout_margin="5dp"
+                android:text="Home"
+                android:textSize="25dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
